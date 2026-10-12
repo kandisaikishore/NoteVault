@@ -1,5 +1,10 @@
 # 📝 NoteVault
 
+## Live Demo / Deployment URL
+
+**Deployment URL:** Not verified yet. Add the confirmed public application URL here after checking the live service. The GitHub repository link is not a deployment URL.
+
+
 [![Repository](https://img.shields.io/badge/GitHub-Repository-181717?logo=github)](https://github.com/saikishore2410/NoteVault) [![Issues](https://img.shields.io/github/issues/saikishore2410/NoteVault)](https://github.com/saikishore2410/NoteVault/issues) [![Last Commit](https://img.shields.io/github/last-commit/saikishore2410/NoteVault)](https://github.com/saikishore2410/NoteVault/commits/main)
 
 > NoteVault is a full-stack study workspace for handwritten STEM notes, AI-powered digitization, research grounding, and focused study workflows.
