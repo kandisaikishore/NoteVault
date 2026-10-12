@@ -671,7 +671,7 @@ export default function App() {
                 onUpvote={handleUpvote}
                 hasUpvoted={upvotedIds.includes(note.id)}
                 onOpenOCR={handleOpenOCR}
-                onGroundSearch={(query, subj) => handleOpenSearchGrounding(query, subj)}
+                onGroundSearch={(query, subj) => handleOpenSearchGroundingModal(query, subj)}
               />
             ))}
           </div>
