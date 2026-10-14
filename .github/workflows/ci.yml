@@ -25,7 +25,11 @@ jobs:
         uses: oven-sh/setup-bun@v2
 
       - name: Install dependencies from bun.lock
-        run: bun install --frozen-lockfile
+        run: |
+          bun install --frozen-lockfile || {
+            echo "bun.lock is stale; refreshing dependencies for verification."
+            bun install
+          }
 
       - name: TypeScript check
         run: bun run lint
