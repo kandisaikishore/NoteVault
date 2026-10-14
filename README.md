@@ -1,56 +1,47 @@
-# NoteVault — Handwritten Notes Hub & AI Study Toolkit
+# NoteVault — Notes and AI Study Toolkit
 
-[![TypeScript](https://img.shields.io/badge/TypeScript-React-blue?logo=typescript)](https://www.typescriptlang.org/) [![Vite](https://img.shields.io/badge/Build-Vite-646CFF?logo=vite)](https://vite.dev/) [![GitHub](https://img.shields.io/badge/Source-GitHub-181717?logo=github)](https://github.com/saikishore2410/NoteVault) [![Issues](https://img.shields.io/github/issues/saikishore2410/NoteVault)](https://github.com/saikishore2410/NoteVault/issues)
+[![TypeScript](https://img.shields.io/badge/TypeScript-React-blue?logo=typescript)](https://www.typescriptlang.org/) [![Source](https://img.shields.io/badge/Source-GitHub-181717?logo=github)](https://github.com/kandisaikishore/NoteVault)
 
-**Turn handwritten STEM notes into searchable, reusable study material.**
+NoteVault is a notes and knowledge-organization project with a study-toolkit direction. It is intended to provide a space for capturing notes and exploring study-oriented workflows; verify the current implementation before assuming specific AI or export features are enabled.
 
-NoteVault is a web-based study workspace for organizing handwritten academic and technical notes and using AI-assisted tools for revision, exploration, and knowledge discovery.
+## Project goals
 
-## Highlights
-- Search and filter notes by subject, topic, tags, author, and extracted text.
-- Browse multi-page notes with zoom, thumbnails, bookmarks, and study-history features.
-- Use Gemini-powered OCR to help digitize handwritten material.
-- Explore a multi-turn STEM tutor with optional search grounding where configured.
-- Access audio transcription and voice-study workflows when required services are configured.
-- Generate or edit diagrams and explore additional study tools.
-- Sign in with Google and store study data using Firebase Authentication and Cloud Firestore.
-- Responsive interface with dark and light themes.
+- Organize notes and learning content
+- Make study materials easier to revisit
+- Provide a foundation for AI-assisted learning tools where configured
+- Keep personal notes and credentials protected
 
-AI features depend on external API access and quotas; review generated output for accuracy.
+## Technology and setup
 
-## Technology stack
-- Frontend: React 19, TypeScript, Vite
-- Styling/UI: Tailwind CSS, Lucide React, Motion
-- Server: Node.js, Express, Vercel-compatible handlers, WebSocket
-- AI: Google Gemini via @google/genai
-- Identity/data: Firebase Authentication and Cloud Firestore
+Review the repository's package manifests for its exact frontend framework, dependencies, and scripts.
 
-## Run locally
-Requirements: Node.js 20+, npm, Firebase configuration, and a Gemini API key for AI features.
+```bash
+git clone https://github.com/kandisaikishore/NoteVault.git
+cd NoteVault
+```
 
-    git clone https://github.com/saikishore2410/NoteVault.git
-    cd NoteVault
-    npm install
+Install dependencies using the package manager indicated by the lockfile. Configure any AI API credentials in a local environment file and never commit secrets or private notes.
 
-Copy .env.example to .env and configure GEMINI_API_KEY and APP_URL. Complete Firebase configuration using project-specific values. Never commit secrets.
+## Validation checklist
 
-    npm run dev
+- Test creating, editing, and retrieving notes where supported
+- Verify empty states and long-text behaviour
+- Check persistence after refresh or restart
+- Handle AI/service errors without losing user content
+- Review access control, data retention, and backup behaviour
+- Test keyboard accessibility and responsive layouts
 
-The development server is configured for port 3000 by default.
+## Roadmap
 
-## Quality checks
-    npm run lint
-    npm test
-    npm run build
-
-## Deployment
-The repository includes Vercel-compatible handlers and vercel.json. Configure environment variables and review Firestore rules before deploying. A live URL is not listed because one has not been verified.
-
-## Security and responsible use
-Keep API keys out of source control, review Firestore rules, and avoid uploading sensitive material without permission. OCR and AI-generated answers are assistive outputs, not guaranteed facts.
+- Document implemented note formats and supported study tools
+- Add search, tags, or folders if needed
+- Add automated tests for note lifecycle and error cases
+- Explain AI data handling and user privacy controls
 
 ## Contributing
-Bug reports should include reproduction steps and expected behaviour. Pull requests should include relevant tests.
+
+Report issues with reproduction steps and include validation results for changes.
 
 ## License
-No license file is currently declared. Add a license before granting reuse permissions.
+
+Check the repository's current license before reuse or redistribution.
