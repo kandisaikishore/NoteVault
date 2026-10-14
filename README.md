@@ -1,98 +1,56 @@
-# 📝 NoteVault
+# NoteVault — Handwritten Notes Hub & AI Study Toolkit
 
-## Live Demo / Deployment URL
+[![TypeScript](https://img.shields.io/badge/TypeScript-React-blue?logo=typescript)](https://www.typescriptlang.org/) [![Vite](https://img.shields.io/badge/Build-Vite-646CFF?logo=vite)](https://vite.dev/) [![GitHub](https://img.shields.io/badge/Source-GitHub-181717?logo=github)](https://github.com/saikishore2410/NoteVault) [![Issues](https://img.shields.io/github/issues/saikishore2410/NoteVault)](https://github.com/saikishore2410/NoteVault/issues)
 
-**Deployment URL:** Not verified yet. Add the confirmed public application URL here after checking the live service. The GitHub repository link is not a deployment URL.
+**Turn handwritten STEM notes into searchable, reusable study material.**
 
+NoteVault is a web-based study workspace for organizing handwritten academic and technical notes and using AI-assisted tools for revision, exploration, and knowledge discovery.
 
-[![Repository](https://img.shields.io/badge/GitHub-Repository-181717?logo=github)](https://github.com/saikishore2410/NoteVault) [![Issues](https://img.shields.io/github/issues/saikishore2410/NoteVault)](https://github.com/saikishore2410/NoteVault/issues) [![Last Commit](https://img.shields.io/github/last-commit/saikishore2410/NoteVault)](https://github.com/saikishore2410/NoteVault/commits/main)
+## Highlights
+- Search and filter notes by subject, topic, tags, author, and extracted text.
+- Browse multi-page notes with zoom, thumbnails, bookmarks, and study-history features.
+- Use Gemini-powered OCR to help digitize handwritten material.
+- Explore a multi-turn STEM tutor with optional search grounding where configured.
+- Access audio transcription and voice-study workflows when required services are configured.
+- Generate or edit diagrams and explore additional study tools.
+- Sign in with Google and store study data using Firebase Authentication and Cloud Firestore.
+- Responsive interface with dark and light themes.
 
-> NoteVault is a full-stack study workspace for handwritten STEM notes, AI-powered digitization, research grounding, and focused study workflows.
+AI features depend on external API access and quotas; review generated output for accuracy.
 
-## At a glance
+## Technology stack
+- Frontend: React 19, TypeScript, Vite
+- Styling/UI: Tailwind CSS, Lucide React, Motion
+- Server: Node.js, Express, Vercel-compatible handlers, WebSocket
+- AI: Google Gemini via @google/genai
+- Identity/data: Firebase Authentication and Cloud Firestore
 
-- **Purpose:** Understand the problem and supported workflows from the feature and scope sections below.
-- **Setup:** Follow the project-specific steps in **Getting started** or **Run locally**; verify commands against the current source and package scripts.
-- **Configuration:** Keep API keys, database passwords, tokens, and user data out of commits. Use local environment variables for secrets.
-- **Quality:** Run the available build, tests, and lint checks before proposing changes.
+## Run locally
+Requirements: Node.js 20+, npm, Firebase configuration, and a Gemini API key for AI features.
 
+    git clone https://github.com/saikishore2410/NoteVault.git
+    cd NoteVault
+    npm install
 
+Copy .env.example to .env and configure GEMINI_API_KEY and APP_URL. Complete Firebase configuration using project-specific values. Never commit secrets.
 
-NoteVault is a full-stack study workspace for handwritten STEM notes, AI-powered digitization, research grounding, and focused study workflows.
+    npm run dev
 
-## What it includes
-
-- 🔍 Search and filter notes by subject, topic, tags, authors, and OCR content.
-- 📖 Multi-page note viewer with zoom, thumbnails, bookmarks, upvotes, and study-history resume.
-- 🤖 Handwritten-note OCR powered by Gemini.
-- 💬 Multi-turn STEM tutor with optional Google Search grounding.
-- 🎙️ Audio transcription and a live voice study tutor.
-- 🎬 STEM concept video generation and 🎵 focus-music generation.
-- 🧩 Diagram generation/editing and campus study-spot discovery.
-- 🔐 Google authentication and Firestore-backed user study data.
-- 🌗 Responsive dark/light UI.
-
-## Tech stack
-
-**Frontend:** React 19, TypeScript, Vite, Tailwind CSS, Lucide React, Motion
-
-**Backend:** Node.js, Express, Vercel serverless handlers, WebSocket
-
-**AI:** Google Gemini via `@google/genai`
-
-**Data/Auth:** Firebase Authentication and Cloud Firestore
-
-## Local development
-
-### Requirements
-
-- Node.js 20+
-- A Gemini API key for AI features
-- Firebase project configuration for authentication and Firestore
-
-### Setup
-
-```bash
-git clone https://github.com/saikishore2410/NoteVault.git
-cd NoteVault
-npm install
-```
-
-Create a local `.env` from `.env.example` and configure:
-
-- `GEMINI_API_KEY`
-- `APP_URL`
-
-Then start the development server:
-
-```bash
-npm run dev
-```
-
-The app runs on `http://localhost:3000` by default.
+The development server is configured for port 3000 by default.
 
 ## Quality checks
-
-Run the same checks used by CI:
-
-```bash
-npm run lint
-npm test
-npm run build
-```
+    npm run lint
+    npm test
+    npm run build
 
 ## Deployment
+The repository includes Vercel-compatible handlers and vercel.json. Configure environment variables and review Firestore rules before deploying. A live URL is not listed because one has not been verified.
 
-### Vercel
+## Security and responsible use
+Keep API keys out of source control, review Firestore rules, and avoid uploading sensitive material without permission. OCR and AI-generated answers are assistive outputs, not guaranteed facts.
 
-The `api/` directory contains Vercel-compatible serverless handlers. Configure `GEMINI_API_KEY` in the Vercel project environment variables before deploying.
+## Contributing
+Bug reports should include reproduction steps and expected behaviour. Pull requests should include relevant tests.
 
-### Custom Node server
-
-The root `server.ts` provides the full Express + WebSocket development/server runtime.
-
-## Security notes
-
-- Never commit a real `GEMINI_API_KEY` or other secrets.
-- Firestore authorization is enforced in `firestore.rules`.
-- Keep production API keys in the hosting provider's secret/environment-variable store.
+## License
+No license file is currently declared. Add a license before granting reuse permissions.
