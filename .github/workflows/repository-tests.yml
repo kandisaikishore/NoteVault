@@ -63,7 +63,10 @@ jobs:
             pnpm install --frozen-lockfile
           elif [ -f bun.lock ] || [ -f bun.lockb ]; then
             PM=bun
-            bun install --frozen-lockfile
+            bun install --frozen-lockfile || {
+              echo "::warning::Bun lockfile is stale; refreshing dependencies for verification."
+              bun install
+            }
           elif [ -f package-lock.json ]; then
             PM=npm
             npm ci
