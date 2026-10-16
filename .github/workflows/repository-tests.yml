@@ -68,8 +68,8 @@ jobs:
             PM=npm
             npm ci
           else
-            PM=npm
-            npm install --no-audit --no-fund
+            PM=pnpm
+            pnpm install --no-frozen-lockfile
           fi
           run_if_defined() {
             local script="$1"
